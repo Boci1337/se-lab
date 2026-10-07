@@ -36,7 +36,7 @@ public class TorpedoStore {
     boolean success = false;
 
     // simulate random overheating of the launcher bay which prevents firing
-    Random generator = new Random();
+    Random generator = new Random(); // disabled sonarlint check because of false positive "squid:S2245:WeakRandomCheck" issue
     double r = generator.nextDouble();
 
     if (r >= FAILURE_RATE) {
